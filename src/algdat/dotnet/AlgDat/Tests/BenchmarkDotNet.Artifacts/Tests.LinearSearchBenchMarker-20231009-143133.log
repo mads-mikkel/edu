@@ -1,5 +1,0 @@
-// Validating benchmarks:
-//    * Unable to use LinearSearchBenchMarker.key with [Params] because it's a readonly field. Please, remove the readonly modifier.
-
-//    * Unable to use LinearSearchBenchMarker.key with [Params] because it's not public. Please, make it public.
-
