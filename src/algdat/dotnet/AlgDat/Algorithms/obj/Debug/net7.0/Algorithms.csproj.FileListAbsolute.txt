@@ -1,0 +1,16 @@
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\Algorithms\bin\Debug\net7.0\Algorithms.deps.json
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\Algorithms\bin\Debug\net7.0\Algorithms.dll
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\Algorithms\bin\Debug\net7.0\Algorithms.pdb
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\Algorithms\bin\Debug\net7.0\DataGenerators.dll
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\Algorithms\bin\Debug\net7.0\DataGenerators.pdb
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\Algorithms\bin\Debug\net7.0\DataGenerators.xml
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\Algorithms\obj\Debug\net7.0\Algorithms.csproj.AssemblyReference.cache
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\Algorithms\obj\Debug\net7.0\Algorithms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\Algorithms\obj\Debug\net7.0\Algorithms.AssemblyInfoInputs.cache
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\Algorithms\obj\Debug\net7.0\Algorithms.AssemblyInfo.cs
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\Algorithms\obj\Debug\net7.0\Algorithms.csproj.CoreCompileInputs.cache
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\Algorithms\obj\Debug\net7.0\Algorithms.csproj.CopyComplete
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\Algorithms\obj\Debug\net7.0\Algorithms.dll
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\Algorithms\obj\Debug\net7.0\refint\Algorithms.dll
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\Algorithms\obj\Debug\net7.0\Algorithms.pdb
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\Algorithms\obj\Debug\net7.0\ref\Algorithms.dll

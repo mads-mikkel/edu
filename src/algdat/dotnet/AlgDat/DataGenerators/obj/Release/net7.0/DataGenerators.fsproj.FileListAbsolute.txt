@@ -1,0 +1,13 @@
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\DataGenerators\bin\Release\net7.0\DataGenerators.deps.json
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\DataGenerators\bin\Release\net7.0\DataGenerators.dll
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\DataGenerators\bin\Release\net7.0\DataGenerators.pdb
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\DataGenerators\bin\Release\net7.0\DataGenerators.xml
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\DataGenerators\obj\Release\net7.0\DataGenerators.fsproj.AssemblyReference.cache
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\DataGenerators\obj\Release\net7.0\DataGenerators.AssemblyInfoInputs.cache
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\DataGenerators\obj\Release\net7.0\DataGenerators.AssemblyInfo.fs
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\DataGenerators\obj\Release\net7.0\DataGenerators.fsproj.CoreCompileInputs.cache
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\DataGenerators\obj\Release\net7.0\DataGenerators.dll
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\DataGenerators\obj\Release\net7.0\refint\DataGenerators.dll
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\DataGenerators\obj\Release\net7.0\DataGenerators.xml
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\DataGenerators\obj\Release\net7.0\DataGenerators.pdb
+C:\Users\mara\source\repos\edu\src\algdat\dotnet\AlgDat\DataGenerators\obj\Release\net7.0\ref\DataGenerators.dll

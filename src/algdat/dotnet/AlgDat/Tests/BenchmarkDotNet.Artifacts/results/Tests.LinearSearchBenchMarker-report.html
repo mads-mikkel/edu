@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Tests.LinearSearchBenchMarker-20231009-143322</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.9+228a464e8be6c580ad9408e98f18813f6407fb5a, Windows 10 (10.0.19045.3448/22H2/2022Update)
+Intel Core i7-8850H CPU 2.60GHz (Coffee Lake), 1 CPU, 12 logical and 6 physical cores
+.NET SDK 7.0.400
+  [Host]     : .NET 7.0.11 (7.0.1123.42427), X64 RyuJIT AVX2
+  DefaultJob : .NET 7.0.11 (7.0.1123.42427), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>key</th><th>Mean  </th><th>Error</th><th>StdDev</th>
+</tr>
+</thead><tbody><tr><td>Ite</td><td>1</td><td>4.645 &mu;s</td><td>0.0606 &mu;s</td><td>0.0506 &mu;s</td>
+</tr><tr><td>Rec</td><td>1</td><td>4.514 &mu;s</td><td>0.0881 &mu;s</td><td>0.1048 &mu;s</td>
+</tr><tr><td>Ite</td><td>500</td><td>2,774.747 &mu;s</td><td>48.9230 &mu;s</td><td>43.3690 &mu;s</td>
+</tr><tr><td>Rec</td><td>500</td><td>3,093.509 &mu;s</td><td>58.9048 &mu;s</td><td>63.0275 &mu;s</td>
+</tr><tr><td>Ite</td><td>1000</td><td>6,622.262 &mu;s</td><td>116.1026 &mu;s</td><td>129.0478 &mu;s</td>
+</tr><tr><td>Rec</td><td>1000</td><td>7,322.418 &mu;s</td><td>111.5984 &mu;s</td><td>93.1897 &mu;s</td>
+</tr></tbody></table>
+</body>
+</html>
