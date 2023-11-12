@@ -18,4 +18,4 @@ Indsæt formål og mål her.
 
 **Del 4: [Applikationer i .NET](#del4)**
 
-**Del 5: [Distribuerede Systemer](#del5)**
+**Del 5: [Distribuerede Systemer](/docs/distributed-systems/distributed-systems-contents.md)**
