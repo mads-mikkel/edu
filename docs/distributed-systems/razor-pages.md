@@ -44,4 +44,4 @@ HINT:
 > På hver af siderne er der links til andre steder på Learn Razor Pages. Det er en god idé at klikke på de fleste af dem, for at få viden til at kunne svare på spørgsmålene.
 
 ## 5.1.3 turbokart.dk
-Nu skal du lave sitet til turbekart.dk. Læse [casen om turbokart](/distributed-systems/turbokart.md), og konstruer sitet.
+Nu skal du lave sitet til turbekart.dk. Læse [casen om turbokart](/docs/distributed-systems/turbokart.md), og konstruer sitet.

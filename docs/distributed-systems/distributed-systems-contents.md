@@ -16,12 +16,12 @@ Du skal også lære om hvordan man opdaterer klienter i realtid fra serveren med
 *--- yderligere beskrivelser er på vej... ----*
 
 # Case: Turbokart
-Du finder casen om [turbokart](/distributed-systems/turbokart.md) her.
+Du finder casen om [turbokart](/docs/distributed-systems/turbokart.md) her.
 
 
 # Indhold
 
-**5.1 [Razor Pages](/distributed-systems/razor-pages.md)**
+**5.1 [Razor Pages](/docs/distributed-systems/razor-pages.md)**
 
 **5.2 MVC**
 
