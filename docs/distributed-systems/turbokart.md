@@ -1,12 +1,16 @@
 # TURBOKART
 En case til implementering af distribuerede systemer.
 
+Du skal forke [github.com/mads-mikkel/Turbokart](https://github.com/mads-mikkel/Turbokart), og derefter clone til din maskine, og således arbejde videre på den løsning der er. Den indeholder kun Marada Lap Timer.
+
 # Indhold
 
 # 1. Systembeskrivelse
 Turbokart er en virksomhed der tilbyder hæsblæsende gokart oplevelser!
 
-Din opgave er at udvikle et system bestående af flere applikationer, der kommunikerer sammen.
+Din opgave er at udvikle et system bestående af flere applikationer, der kommunikerer sammen. Her er et overblik over systemet:
+
+![Turbokart systemet](TK-system.jpg)
 
 # 2. Applikationer og datakilder
 ## 2.1. Datakilder
@@ -30,6 +34,8 @@ B. **SessionDB** er en database til omgangstider.
 # 3. Kravspecifikation
 ## 3.1. Funktionelle krav
 ### 3.1.1. turbokart.dk
+For at lave en hjemmeside til en virksomhed, skal man sætte sig ind i virksomhedens forretningsdomæne - det vil sige hvilke produkter de tilbyder, og hvordan de tilbyder det til deres kunder. Turbokart er en gokartbane, så derfor kan du lade dig inspirere af andre gokart hjemmesider.
+
 1. Forsiden skal indeholde et logo, en overskrift "Turbokart", samt en kort beskrivelse af Turbokart.
 2. Der skal være navigation til en bookingside, hvor brugeren kan booke en tid til at køre gokart for 1-20 personer. Flere bookings kan godt køre i samme session (warm-up, kvalifikation og grand prix), men der må ikke være flere end 20 karts i en session.
 3. Der skal være navigation til en side med priser og beskrivelse af de to produkter man kan købe (lad dig inspirere af [vandelgokart.dk](https://vandelgokart.dk/)): 
