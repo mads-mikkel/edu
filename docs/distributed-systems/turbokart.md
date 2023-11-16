@@ -1,8 +1,5 @@
 # TURBOKART
 En case til implementering af distribuerede systemer.
-
-Du skal forke [github.com/mads-mikkel/Turbokart](https://github.com/mads-mikkel/Turbokart) (master branch), og derefter clone til din maskine, og således arbejde videre på den løsning. Den indeholder kun Marada Lap Timer.
-
 <br><br><br><br>
 
 # 1. Systembeskrivelse
@@ -81,3 +78,18 @@ Systemarkitekturen beskriver hvordan de forskellige applikationer kommunikerer m
 
 Sammenfattende passer CLEAN godt sammen med microservices, netop fordi det er nemt at fejlsøge, teste, udvikle nye features og deploye til produktionsmiljøet.
 <br><br><br><br>
+
+# 5. Implementering
+---
+Du skal forke [github.com/mads-mikkel/Turbokart](https://github.com/mads-mikkel/Turbokart) (master branch), og derefter clone til din maskine, og således arbejde videre på den løsning. Den indeholder kun Marada Timer Tech (simulation af omgangstider).
+
+## 5.1. Fundamentet til CLEAN arkitektur
+Det er fornuftigt at starte med at bygge fundamentet til Turbokart systemet, i stedet for at bygge de første applikationer, for bagefter at refactor til CLEAN arkitektur. SÅ inden vi bygger turbekart.dk, skal vi bygge:
+
+1. **Byg et generisk Repository/Unit of Work klassebibliotek**, der implementerer Repository/Unit of Work designmønsteret. Det gør at vi kan genbruge dette klassebibliotek, der hvor der er behov. Vi skal som minimum bruge det både til TurbokartDB og SessionDB. Det er generisk og det giver os mulighed for bagefter at lave konkrete Repository klasser, der håndterer tilgang til bestemte data i én af databaserne, f.eks. bookings i TurbekartDB.
+
+2. **Byg forretningsdomænet Entities**, der repræsenterer forretningsdomænet. Start med at lave to klasser Booking og Customer. Det er IKKE de samme klasser som vi senere skal bruge i Entity Framework. Vi skal også bruge en klasse BookingManager, der repræsenterer én der håndhæver reglerne om bookings.
+
+
+3. Et klassebibliotek der implementerer de use cases der er i Turbokart systemet - dette kaldes et repository 
+4. Et REST web API, der bliver til en microservice, der håndterer applikationers tilgang til databasen.

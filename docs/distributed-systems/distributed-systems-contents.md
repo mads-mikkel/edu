@@ -37,3 +37,5 @@ Du finder casen om [turbokart](/docs/distributed-systems/turbokart.md) her.
 
 ## Appendices
 **A. Relevante Design Mønstre**
+
+**B. [EF Core Code First med DbContext og Entities i forskellige projekter, fra CLI](/distributed-systems/EfCore.md)**
