@@ -4,7 +4,7 @@ af Mads Mikkel Rasmussen
 
 © 2023. Alle rettigheder forbeholdes.
 
-Senest ændret: 12.11.2023.
+Senest ændret: 27.11.2023.
 
 ## Introduktion
 Indsæt formål og mål her.
