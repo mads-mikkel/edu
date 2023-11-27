@@ -23,9 +23,9 @@ Du finder casen om [turbokart](/docs/distributed-systems/turbokart.md) her.
 
 **5.1 [Razor Pages](/docs/distributed-systems/razor-pages.md)**
 
-**5.2 MVC**
+**5.2 [REST web API](/docs/distributed-systems/api.md)**
 
-**5.3 REST web API**
+**5.3 MVC**
 
 **5.4 SignalR**
 
