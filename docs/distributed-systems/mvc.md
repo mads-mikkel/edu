@@ -5,6 +5,9 @@ MVC er et designmønster man anvender både til websites og web API'er i ASP.NET
 ## 5.3.1. Viden
 Du skal se [denne video](https://www.youtube.com/watch?v=jhj9ouy7x1g) og selv gøre som der bliver gjort. På denne måde, får du en hands-on oplevelse af MVC i ASP.NET Core i Visual Studio. Det er denne viden du skal anvende til at lave Turbokart Booking Management.
 
+**OBS:**
+> Til denne opgave skal der ikke udvikles hverken Gateway API eller Auth API.
+
 
 ## 5.3.2 Implementation af Turbokart Booking Management
 Denne opgave kan løses både individuelt og i en gruppe. Du har på forhånd fået at vide hvad du skal.
@@ -34,3 +37,14 @@ Din lærer lader dig vide, hvordan og hvornår du skal besvare følgende spørgs
 6. Hvordan virker det, at man kan sende et argument af en model type til en parameter på en action method?
 7. Hvad er fordelene og ulemperne ved at anvende Model klasserne som Entities i f.eks. CLEAN arkitektur?
 8. Find de tre mest anvendte platforme ud over ASP.NET, der også bruger MVC.
+
+## 5.3.4. Gode råd
+Planlæg arbejdet (eventuelt i Microsoft Planner):
+1. Skab overblik over de forskellige opgaver der skal løses.
+2. Lav en rækkefølge over opgaverne, og husk den skriftlige besvarelse.
+
+Til selve opgaverne kan du med fordel vælge at inddrage disse værktøjer:
+* lave et diagram over TurbokartDB, hvor brugere er tilføjet som tabel. 
+* Implementer nu diagrammet med EF Code First migration.
+* Lav et klassediagram over BookingUseCase, og overvej hvilke nye metoder der skal være, samt om der er behov for at eksisterende metoder ændres - og notér resultatet af disse overvejelser ned med argumenter om hvorfor ændringerne er nødvendige.
+* Lav dokumentation for systemet ved at lave en oversigt over URL'er og portnumre med tilhørende beskrivelser.
