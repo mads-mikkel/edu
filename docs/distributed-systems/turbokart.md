@@ -3,7 +3,7 @@ En case til implementering af distribuerede systemer.
 
 Du skal forke [github.com/mads-mikkel/Turbokart](https://github.com/mads-mikkel/Turbokart) (master branch), og derefter clone til din maskine, og således arbejde videre på den løsning. Den indeholder kun Marada Lap Timer.
 
-<br><br><br><br>
+<br><br>
 
 # 1. Systembeskrivelse
 Turbokart er en virksomhed der tilbyder hæsblæsende gokart oplevelser!
