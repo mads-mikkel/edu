@@ -21,3 +21,6 @@ Ud fra denne viden skal du nu løse to opgaver:
 Man ser ofte, at en chat bliver brugt som eksempel. Det står dig frit for hvad du ønsker at anvende. Du må dog maksimalt bruge to skoledage på opgaven.
 > [!TIP] 
 > Keep it simple.
+
+> [!IMPORTANT]
+> Hub og klient må ikke have reference til hinanden i Visual Studio, hvis man anvender .NET klient til eksemplet.
