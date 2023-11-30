@@ -27,7 +27,7 @@ Du finder casen om [turbokart](/docs/distributed-systems/turbokart.md) her.
 
 **5.3 [MVC](/docs/distributed-systems/mvc.md)**
 
-**5.4 SignalR**
+**5.4 [SignalR](/docs/distributed-systems/signalr.md)**
 
 **5.5 Blazor**
 

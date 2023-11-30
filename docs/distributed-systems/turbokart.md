@@ -89,5 +89,3 @@ Den logiske arkitektur beskriver hvordan de forskellige applikationer og deres k
 Systemarkitekturen beskriver hvordan de forskellige applikationer kommunikerer med hinanden, når systemet kører. Her skal vi bruge microservicearkitekturen. Det sikrer, at vi har god oppetid, samt at man kan udvikle og deploye nye features og fejlrettelser uden at skulle lukke hele systemet ned.
 
 Sammenfattende passer CLEAN godt sammen med microservices, netop fordi det er nemt at fejlsøge, teste, udvikle nye features og deploye til produktionsmiljøet.
-
-Testtext.
