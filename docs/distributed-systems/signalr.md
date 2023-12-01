@@ -8,8 +8,8 @@ Selve serveren skal være et ASP.NET Core project og kan være et API, et Razor 
 
 # 5.4.1. Viden
 For at opnå viden skal du første gennemlæse disse to sider:
-* Microsoft Docs: [Use hubs in SignalR for ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/signalr/hubs?view=aspnetcore-8.0)
-* Microsoft Docs: [ASP.NET Core SignalR .NET Client](https://learn.microsoft.com/en-us/aspnet/core/signalr/dotnet-client?view=aspnetcore-8.0&tabs=visual-studio)
+* Microsoft Docs: **[Use hubs in SignalR for ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/signalr/hubs?view=aspnetcore-8.0)**
+* Microsoft Docs: **[ASP.NET Core SignalR .NET Client](https://learn.microsoft.com/en-us/aspnet/core/signalr/dotnet-client?view=aspnetcore-8.0&tabs=visual-studio)**
 <br><br>
 
 # 5.4.2. Opgave
@@ -17,6 +17,8 @@ Ud fra denne viden skal du nu løse to opgaver:
 1. Lav dokumentation på følgende How To's:
     * Hvordan får man lavet en typestærk Hub på en API server?
     * Hvordan får man forbundet en .NET klient til en Hub?
+    
+    Det er vigtigt at du også beskriver *hvorfor* hvert skridt gennemføres.
 2. Lav et eksempel med en .NET klient (WPF/UWP/MAUI/Console/Razor/MVC/Blazor) der modtager og sender data (evt. en notifikation) fra/til en SignalR Hub.
 Man ser ofte, at en chat bliver brugt som eksempel. Det står dig frit for hvad du ønsker at anvende. Du må dog maksimalt bruge to skoledage på opgaven.
 > [!TIP] 
@@ -24,3 +26,6 @@ Man ser ofte, at en chat bliver brugt som eksempel. Det står dig frit for hvad 
 
 > [!IMPORTANT]
 > Hub og klient må ikke have reference til hinanden i Visual Studio, hvis man anvender .NET klient til eksemplet.
+
+> [!NOTE]
+> Jeg har lavet et eksempel der bruger chat, du finder det her: **[SignalrChat](https://github.com/mads-mikkel/SignalrChats)**. 
