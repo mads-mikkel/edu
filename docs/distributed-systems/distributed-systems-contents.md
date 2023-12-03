@@ -27,13 +27,17 @@ Du finder casen om [turbokart](/docs/distributed-systems/turbokart.md) her.
 
 **5.3 [MVC](/docs/distributed-systems/mvc.md)**
 
-**5.4 [SignalR](/docs/distributed-systems/signalr.md)**
+**5.4 [Blazor](/docs/distributed-systems/blazor.md)**
 
-**5.5 Blazor**
+**5.5 [SignalR](/docs/distributed-systems/signalr.md)**
 
-**5.6 Platform as a Service (PaaS)**
+**5.6 Micorservices med gRPC**
 
-**5.7 CI/CD**
+**5.7 Docker**
+
+**5.8 CI/CD**
+
+**5.9 Sikkerhed**
 
 ## Appendices
 **A. Relevante Design Mønstre**

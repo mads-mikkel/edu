@@ -1,4 +1,4 @@
-# 5.3 MVC
+# 5.3. MVC
 MVC er et designmønster man anvender både til websites og web API'er i ASP.NET Core. Man anvender det også på andre platforme, og det er designet til at håndtere HTTP requests fra en klient til en webserver. Razor Pages er en variant af MVC i ASP.NET Core, hvor der er mindre fokus på mulighed for at konfigurere, og mere fokus på at være produktiv. Denne side omhandler MCV templaten i Visual Studio, og læringen omfatter to trin: Du skal først følge en tutorial, der gennemgår hvad MVC er og hvordan man gør i Visual Studio. Så skal du implementere Turbokart Booking Management i Turbokart casen.
 
 
