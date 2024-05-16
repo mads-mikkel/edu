@@ -58,3 +58,13 @@ CLI betyder Command Line Interface og er det at udføre kommandoer i  Terminal/k
 1. Naviger hen til EFContexts.
 2. Kør `dotnet ef migrations add InitialCreate`. Dette klargører at databasen kan laves.
 3. Kør `dotnet ef database update`. Dette laver databasen.
+
+
+NOTE: Hvis man har forskellige projekter til startup og entities, så lav databasen manuelt på forhånd, og kør disse fra roden (der hvor .sln er):
+```ps
+dotnet ef migrations add InitialCreate --startup-project "SosuPower.Api\SosuPower.Api.csproj" --project "SosuPower.Entities\SosuPower.Entities.csproj
+```
+
+```ps
+dotnet ef database update --startup-project "SosuPower.Api\SosuPower.Api.csproj" --project "SosuPower.Entities\SosuPower.Entities.csproj
+```
