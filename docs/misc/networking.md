@@ -72,6 +72,7 @@ Real-Life Examples:
 
 ### 3.3 Packet Parsing
 *	Objective: Parse the captured packets to extract useful information.
+
 *	Overview:
     1.	Add Parsing Library: Add a crate that provides packet parsing capabilities.
     2.	Parse Headers: Parse the Ethernet, IP, and TCP headers from the captured packets.
@@ -88,3 +89,48 @@ Real-Life Examples:
     3.	Print Parsed Information:
         *	Print the extracted information in a readable format, such as “Source IP: X.X.X.X, Destination IP: Y.Y.Y.Y, Source Port: A, Destination Port: B”.
         *	Useful Fact: Parsing packet headers allows you to analyze network traffic patterns, identify sources and destinations, and troubleshoot network issues.
+
+### 3.3 Packet Analysis
+* Objective: Analyze captured packets to extract and display specific information.
+
+* Overview: 
+Extract Packet Details: Modify your program to extract details such as source and destination IP addresses, ports, and protocol type from each captured packet.
+Display Packet Information: Print the extracted information in a human-readable format.
+
+* Detailed Explanation:
+    1. Extract Packet Details: 
+Use functions to parse the raw packet data and extract relevant details.
+Focus on extracting the Ethernet, IP, and TCP/UDP headers to get information like source and destination IP addresses and ports.
+
+    2. Display Packet Information:
+Format the extracted information and print it to the console.
+Ensure the output is clear and easy to understand, showing key details of each packet.
+
+* _Useful Fact_: Packet analysis involves understanding the structure of different network protocols and how to parse their headers.
+
+
+### 3.4 Packet Logging
+* Objective: Implement logging to save captured packet information to a file.
+
+* Overview: Add functionality to log packet details to a file.
+Log Packet Information: Write the extracted packet information to the log file.
+
+* Detailed Explanation:
+
+    1. Set Up Logging: Use a logging library or standard file I/O functions to create and manage log files.
+    2. Ensure the log file is properly opened and closed, and handle any potential errors.
+    3. Write the extracted packet details to the log file in a structured format (e.g., CSV, JSON). Include timestamps and other relevant metadata for each packet.
+    4. _Useful Fact: Structured logging formats make it easier to analyze and process log data later. Logging is crucial for long-term monitoring and analysis of network traffic._
+
+### 3.5 Real-Time Packet Monitoring
+* Objective: Implement real-time monitoring to display packet information as it is captured.
+
+* Overview: Modify your program to display packet information in real-time.
+User Interface: Create a simple user interface to show the captured packet details.
+
+* Detailed Explanation:
+
+    1. Real-Time Display: Use a loop to continuously capture and display packet information. Ensure the display updates in real-time without significant delays.
+    2. Create a User Interface: Create a basic user interface using a library or framework suitable for real-time updates (e.g., terminal-based UI, web-based dashboard).
+    3. Ensure the interface is responsive and provides a clear view of the captured packet details.
+    4. _Useful Fact: A good user interface enhances the usability and effectiveness of real-time monitoring tools._
