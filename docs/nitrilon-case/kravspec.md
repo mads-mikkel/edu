@@ -1,9 +1,9 @@
 # KRAVSPECIFIKATION NITRILON
 Kravspecifikationen opdeles i subsystems:
 
-Subsystem 01: Event Rating
-Subsystem 02: Medlemshåndtering
-Subsystem 03: Rollespilsgrupper
+* Subsystem 01: Event Rating
+* Subsystem 02: Medlemshåndtering
+* Subsystem 03: Rollespilsgrupper
 
 ## Subsystem 01: Event Rating
 Aktører:
@@ -13,7 +13,7 @@ Aktører:
 
 01: En gæst skal kunne bedømme oplevelsen af et event, med valg af én værdi på en skala med tre niveauer.
 
-02: Gæsten skal have feedback efter indtastningen af bedømmelsen.
+02: Gæsten skal have feedback efter indtastningen af bedømmelsen, enten at det lykkedes eller ej.
 
 03: Systemet skal automatisk klargøre til næste indtastning, efter en indtastning.
 
