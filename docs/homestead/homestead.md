@@ -13,8 +13,8 @@ We will use versioning, starting with version 0.1, incrementing to version 0.2 a
 |-------|------------|
 | 0.1 | Log in (backend only)
 | 0.2 | Basic livestock management
-| 0.3 | Basic vegitable management
-| 1.0 | Basic management |
+| 0.3 | Log in (with frontend)
+| 1.0 | Basic livestock management (with frontend)|
 
 These versions are meant to get you started, and are not meant to teach you all of the best practices - but they will come later.
 
@@ -173,7 +173,7 @@ And then we must have a .NET web API project, so either:
 
 <br><br><br>
 
-## 4 &nbsp;&nbsp; Log In (v. 0.1)
+## 4 &nbsp;&nbsp; Log In (v. 0.1) backend only
 In this section we will focus on creating the first simple feature: Log In.
 
 The requirements are:
@@ -181,7 +181,7 @@ The requirements are:
 * The user must be able to successfully log in by providing the correct credentials.
 * The user must be shown an error message, if wrong credentials are provided. 
 
-We will first focus on the backend, and then create a simple webpage for the frontend afterwards. This section demonstrates the basic flow of data we will use going forward:
+We will first focus on the backend, and then create a simple webpage for the frontend later. This section demonstrates the basic flow of data we will use going forward:
 1. The user interacts with the frontend.
 2. The frontend sends a request over the network to the backend API.
 3. The API recieves the request, and handles it. Usually it is data to save to the database or fetching data from the database and sending it back to the user.
@@ -291,16 +291,222 @@ We find the relation between these two entites by forming **meaningfull sentence
 So we have, what is called a "one-to-many" relationship between the two entities.
 
 ### Exercise 5.1: Add the tables to the database
+> **Purpose:** To learn about foreign keys in SQL.
+
+#### Learning objectives
+* You learn how to create tables that are related by foreign keys.
+* You learn that foreign keys implements the concept of referential integrity.
+
+#### Learning resources
+To learn why refential integrity is so important, and how to implement it with foreign key contraints in SQL, you should follow [this tutorial](https://www.w3schools.com/sql/sql_foreignkey.asp) on W3Schools.
+
+If you just want to know the general syntax, her it is:
+```sql
+CREATE TABLE ReferencedTable(
+	ReferencedID INT PRIMARY KEY
+)
+
+CREATE TABLE DependentTable(
+	DependentID INT PRIMARY KEY,
+	ForiegnKeyColumn INT NOT NULL
+)
+
+ALTER TABLE DependentTable ADD CONSTRAINT FK_DependentTable_ReferencedTable FOREIGN KEY (ForeignKeyColum) REFERENCES ReferencedTable(ReferencedID);
+```
+Note that the `NOT NULL` means that for a row to exist in the DependentTable, a row in the RefencedTable **must** exist. This implements the "always has" relationship - this is also knowns as a Mandatory relationship. Otherwise, when you omit the `NOT NULL`, a row in the DependentTable, it can exist perfectly fine, wihtout having a foreign key value to a row in the Referenced Table. This implements the "can have" relationship - this is also know as an Optional relationship.
+
+So your task now is to create the two tables in the database using the information you have here, by adding the nescessary SQL code to your script.
+
+#### Learning checks
+* You created the two tables.
+* You related the two tables, using a foreign key constraint.
+
 
 ### Exercise 5.2: Create the new classes
+In this exercise you must use your skills in creating classes with fields, properties, contstructors and methods. You will also need to use your skills in the object oriented principles encapsulation and aggregation.
+
+> **Purpose:** To create the two classes using object oriented principles.
+
+#### Learning objectives
+* You can create the classes, utilizing the the object oriented principles encapsulation and aggregation.
+
+ **❗ Important:** The `Livestock` class should not have a property or field that implements the foreign key value, like `public int LivestockKindId {get; set;}`. This violates the obejct oriented principle of aggregation. Instead the property should be `public LivestockKind LivestockKind {get; set;}` - and you should also use encapsulation.
+
+You must find appropriate allowed/disallowed values for each field in each class, so you enforce the priciple of encapsulation. This can sometimes be difficult because you may have to guess, when it is not clear from the descriptions waht the exact allowed/disallowed values are - so here are a few guidelines:
+* Dates: Make a minimun allowed date, and maximum if needed.
+* Id's: never negative.
+* Strings for names and such: never null - unless specified.
+
+Now go ahead and implement the classes. Also, add a `public override string ToString()` method on the `Livestock` class, returning a brief description of the state of the object (it is not important what `override` is right now). 
+
+#### Learning checks
+* You have created the two classes with appropriate data types.
+* You have created the classes using encapsulation.
+* You have created the classes with one constructor each.
+* You have created a ToString() method on the `Livestock` class
+
 
 ### Exercise 5.3: Modify the Repository class
+In this exercise you must learn how to read and write to the database using the SqlClient library.
+
+> **Purpose:** To learn how to use the SqlClient library, to execute CRUD operations as SQL transactions on a SQL database.
+
+#### Learning objectives
+* You can use SqlClient to execute Read transactions (`SELECT`).
+* You can use SqlClient to execute Write transactions(`INSERT`, `UPDATE`, `DELETE`).
+
+**CRUD** stands dor Create, Read, Update, Delete. You must declare five methods in the Repository class:
+
+|Name | Return value | Parameters |Notes|
+|-----|--------------|------------|-----|
+|GetLivestock | Livestock | Id of livestock| -
+|GetAllLivestock | List of livestock | none | Use a List < Livestock >
+|AddNewLivestock | void | Livestock | Id of parameter must be 0 in order to INSERT
+|UpdateLivestock | void | Livestock | Id of parameter must be positive
+|DeleteLivestock | void | Livestock | Id of parameter must be positive
+
+Here is the general syntax for reading multiple values from some table in the database:
+```cs
+SqlConnection connection = new (connectionString);
+string query = "<your SQL goes here>";
+SqlCommand command = new SqlCommand(query, connection);
+connection.Open();
+SqlDataReader reader = command.ExecuteReader();
+while(reader.Read())
+{
+    int id = (int)reader["<name of the column in the table>"]
+    string name = reader["<name of the column in the table>"].ToString();
+    DateTime date = DateTime.MinValue;
+    if (reader["<name of the column in the table>"] != DBNull.Value)
+    {
+        dateOfBirth = (DateTime)reader["<name of the column in the table>"];
+    }
+}
+// Create the object a class corresponding to the table
+// Add the obejct to a list
+// When the loop completes:
+connection.Close();
+// and return the list.
+```
+Yes, conversion from database date/time format to C# `DateTime`, can be tricky.
+
+Here is the general syntax for writing multiple values from some table in the database:
+```cs
+SqlConnection connection = new (connectionString);
+string query = "<your SQL goes here>";
+SqlCommand command = new SqlCommand(query, connection);
+connection.Open();
+command.ExecuteNonQuery();
+connection.Close();
+```
+If something fails, it is usually because of spelling errors int he connection string or the query, so Remember to pay close attention to this - in particular remember the apostrophes ( ' character) on both sides of NVARCHAR values, like this: `$"UPDATE Livestocks SET PetName = '{livestock.PetName}' WHERE Id = 2;"`.
+
+#### Learning checks
+* You implemented five methods for the CRUD operations.
+* You used the SqlClient library. 
+
 
 ### Exercise 5.4: Add a new controller class to the API
+In this exercise you must learn how to create action methods for all four HTTP methods.
 
-### Exercise 5.5: Create a simple frontend website for the Login
+> **Purpose:** To learn how to create a controller that has action methods for all four HTTP methods.
 
-### Exercise 5.6: Modify the frontend for the livestock management feature
+#### Learning objectives
+* You can declare a controller.
+* You can add action methods to a controller, and so ensure that all CRUD operations are supported for a single table, at the API level.
 
+Again we need five methods as in the repository class. You must ensure they are decorated with the appropriate HTTP attribute, like for the login controller.
+The methods must also have different return types, depending on what they return. An `IActionResult` cannot return data to the client, so for the two methods that return data we need `IActionResult<T>`. Here you must replace `T` with the type you want to return to the client. So `T` should be `Livestock` for the method return only a single object, and `T` should be `List<Livestock>` for the method returning all Livestock.
 
+Go ahead and implement the controller class with the five actions methods, equivalent to the five method in the Repository class. You may need to go online, to figure out which HTTP method corresponds to which CRUD operation.
 
+#### Learning checks
+* You have declared a controller with actions methods supporting the CRUD operations.
+* You have tested that all action methods perform as expected, using the Swagger UI.
+
+<br><br><br>
+
+## 6 &nbsp;&nbsp; Create a simple frontend website for the Login (v. 0.3)
+Now it is time to make the frontend. You must use your skills in HTML and CSS (although styling is not hugely important here). 
+
+> **Purpose:** To create a simple frontend website for a dekstop browser, that implements the log in feature.
+
+#### Learing objectives
+* You can create a simple frontend website implementing the login feature.
+* You can use javascript for the communication with the backend API.
+
+Remember that the user must be shown an error message if the login attempt fails. Currently there is no where to redirect to, when the login succeeds.
+
+You task is to create a simple HTML website using some simple CSS for styling. It is recommended that you make an index.html file, a .css file for the stylesheet, and a .js file for the javascript. Here is some javascript to get you started:
+```js
+document.querySelector('#loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const username = document.querySelector('#username').value;
+    const password = document.querySelector('#password').value;
+
+    fetch('https://api.example.com/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username: username, password: password })
+    })
+});
+```
+This code assumes that there are HTML elements with the id's `loginForm`, `username` and `password`. Your API is located on your own machine, so the URL is something like `localhost:5000/login` - you can find it in the API project. You may need to adapt the JSON being sent, so it has the format that the API is expecting. Also, you may need to make use of the `[FromBody]` attribute for the `User` parameter in the login action method.
+
+### Exercise 6.1: Create the website and the login
+Go ahead, make the files and test it out. Remember to search online and/or chat with an AI assistant, if there are problems.
+
+> **Styling content suggestions:** A semi transparent backgorund image and a nice logo for the Homestead Management System. Also you can choose a color scheme, perhaps with green nuances.
+
+#### Learning checks
+* You have created a website that implements the login feature.
+* You have used javascript to successfully communicate with the backend API.
+
+<br><br><br>
+
+## 7 &nbsp;&nbsp; Version 1.0: Basic livestock management
+You now know all the tools you need to create the feature that brings the system to version 1.0:
+* Creating tables that are related by foreign keys.
+* Creating domain classes.
+* Creating methods in the Repository class for handling database transactions.
+* Creating controllers and action methods in the API project to handle requests from clients.
+* Creating a frontend website, that can communicate with the backend.
+
+And now it is time to develop the core feature of the system in the frontend, using all you have learned. Before beginning, you should know, taht i web development, there is never only a single best way to achieve the objective. Web technologies are very dynamic and trends change very often. 
+
+It is recommended that you use tried and tested technologies for this part, and also keep it simple - there is no need to work with complex javascript frameworks and libraries.
+
+You should also be prepared that this exercise will stretch over more than one day. Frontend development takes time to learn.
+
+> **Purpose**: To create the user interface in a website, that supports the livestock management.
+
+#### Learning objectives
+* You can choose a way to implement the website.
+* You can implement the requirements, using the chosen way.
+
+#### Requirements
+1. The user must be able to add livestock.
+2. The user must be able to edit livestock.
+3. The user must be able to delete livestock.
+4. The user must be able to see a list of all livestock.
+5. The user must be able to see a list of all livestock of a selected livestock kind.
+6. The user must be able to add livestock kinds.
+
+#### The frontend
+After the user successfully logs in, the list of all livestock must be shown. There are basically two way to accomplish the requirements:
+1. There is a table with the livestock data displayed, that also allows the user to add, edit and delete rows.
+2. A seperate page for each operation: displaying a list, adding, editing and deleting livestock.
+
+Your task is to go online and find resources for each way, and decide on one to implement. You can use the learning resources below, if you want to. There is more javascript involved in the first way and it can be quite tricky. The second way is simpler, but involves navigation between pages.
+
+#### Learning resources
+What to search for:
+* Simple CRUD website HTML.
+* How to use javascript for making a simple CRUD table.
+
+#### Learning checks
+* You have fulfilled the requirements, by either of the two ways.
+* You have learned how to go online and search for resources.
