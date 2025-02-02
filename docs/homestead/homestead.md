@@ -5,7 +5,7 @@ These exercises will guide you through the process of creating a simple system. 
 - Object Oriented C# (classes, objects, encapsulatioin, aggregation)
 - git/GitHub for version control [OPTIONAL]
 
-This document is structed as a guide. This means that each step will be explained with a purpose, learning objectives, and learning checks at the end of each section.
+This document is structed as a guide. This means that each step will be explained with a purpose, learning objectives, and learning checks at the end of each section. You must be prepared that this guide will take some time to get through, perhaps several days.
 
 We will use versioning, starting with version 0.1, incrementing to version 0.2 and so on, and ending with version 1.0 for the first production ready release. For each version we will detail the requirements. And after version 1.0 we will continue to develop new features, and modify the system towards best practice, as we go:
 
@@ -50,7 +50,7 @@ By using this system, homesteaders can work more efficiently and sustainably.
 ## 3. &nbsp;&nbsp; Getting started
 We are almost ready to start the development of version 0.1, but first we need some infrastructure. This includes setting up a local database (LocalDB), an Integrated Development Environment (IDE) like Visual Studio/VS Code, and version control with Git/GitHub. These tools will help us manage our code, track changes, and test our features effectively.
 
-### Exercise 01 [OPTIONAL]: Create a Github repository and clone it to your computer
+### Exercise 3.1 [OPTIONAL]: Create a Github repository and clone it to your computer
 > **Purpose**: The purpose of this exercise is to familiarize you with the process of creating and managing a GitHub repository. By the end of this exercise, you will have a local repository connected to a remote GitHub repository, which will help you manage your code and track changes.
 
 #### Learning objectives
@@ -97,7 +97,7 @@ You should now have created a **local** git repository, this is connected to the
 
 Toy are now ready to proceed to creating the database.
 
-### Exercise 02: Creating the database
+### Exercise 3.2: Creating the database
 > **Purpose**: To create a reusable SQL script that can be run over and over again, as the database is modified.
 
 #### Learning objectives
@@ -143,7 +143,7 @@ Go to [W3Schools | SQL](https://www.w3schools.com/sql/) and learn how to create 
 2. You have added SQL code to create a table for users, including columns for usernames and passwords. Also, data for at least two users.
 3. You can run the script multiple times without errors, and it successfully recreates the database and the Users table each time.
 
-### Exercise 03: Choosing IDE
+### Exercise 3.3: Choosing IDE
 > **Purpose**: The purpose of this exercise is to help you choose and set up an Integrated Development Environment (IDE) for developing the .NET-based Homestead Management System. By the end of this exercise, you will have either Visual Studio or Visual Studio Code set up with a new project, ready for development.
 
 #### Learning Objectives
@@ -203,8 +203,10 @@ We need to do three things in the backend:
 
 > **ℹ️** &nbsp; This section describes how to do it in Visual Studio, so if you use VS Code, you must find the equivalent ways of doing it yourself.
 
+### Exercise 4.1: create the User class
 First, create the User class with id (int), username (string) and password (string) as auto-implemented properties. It should not contain anything else for now.
 
+### Exercise 4.1: create the repository class
 Now we need to create the Repository class. This class needs a NuGet package to function as the class responsible for the handeling the database. It is called `Microsoft.Data.SqlClient`. Install this NuGet package into the API project. If you need to learn how to do that, try searching "How to install nuget package in Visual Studio" or "How to install NuGet package in VS Code".
 
 We need to declare a few members in the Repository class, so here is a UML diagram of it:
@@ -246,6 +248,7 @@ public bool Login(User user)
 
 The key take-aways are that we write the SQL query, executes it, and handles the result. This will be our approach for all so-called "transactions" with the database, going forward.
 
+### Exercise 4.3: Create the API controller class
 Next up, is creating the controller class that is responsible for handling request from the frontend. In this section we will use Visual Studio, and the built-in Swagger UI, to demonstrate how this works. Swagger is a UI in the browser, and we can use it to test to backend, without developing a frontend. 
 
 First, right click on the Controller folder, in the API project, in the Solution Explorer. Then select Empty API Controller. Then name it LoginController.cs. This adds the new controller class to the API project.
@@ -500,6 +503,7 @@ After the user successfully logs in, the list of all livestock must be shown. Th
 1. There is a table with the livestock data displayed, that also allows the user to add, edit and delete rows.
 2. A seperate page for each operation: displaying a list, adding, editing and deleting livestock.
 
+### Exercise 7.1: Find resources and implement the frontend
 Your task is to go online and find resources for each way, and decide on one to implement. You can use the learning resources below, if you want to. There is more javascript involved in the first way and it can be quite tricky. The second way is simpler, but involves navigation between pages.
 
 #### Learning resources
