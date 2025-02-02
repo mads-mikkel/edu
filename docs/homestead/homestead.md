@@ -191,7 +191,7 @@ We need to do three things in the backend:
 2. create a class that is responsible for handeling the interaction with the database.
 3. create an API controller for handeling the requests from the frontend.
 
-### Exercise 04: backend log in support
+### Exercise 4.1: backend log in support
 > **Purpose:** Creating support for the log in feature, in the backend of the system.
 
 #### Learning objectives:
@@ -203,10 +203,10 @@ We need to do three things in the backend:
 
 > **ℹ️** &nbsp; This section describes how to do it in Visual Studio, so if you use VS Code, you must find the equivalent ways of doing it yourself.
 
-### Exercise 4.1: create the User class
+### Exercise 4.2: create the User class
 First, create the User class with id (int), username (string) and password (string) as auto-implemented properties. It should not contain anything else for now.
 
-### Exercise 4.1: create the repository class
+### Exercise 4.3: create the repository class
 Now we need to create the Repository class. This class needs a NuGet package to function as the class responsible for the handeling the database. It is called `Microsoft.Data.SqlClient`. Install this NuGet package into the API project. If you need to learn how to do that, try searching "How to install nuget package in Visual Studio" or "How to install NuGet package in VS Code".
 
 We need to declare a few members in the Repository class, so here is a UML diagram of it:
@@ -248,7 +248,7 @@ public bool Login(User user)
 
 The key take-aways are that we write the SQL query, executes it, and handles the result. This will be our approach for all so-called "transactions" with the database, going forward.
 
-### Exercise 4.3: Create the API controller class
+### Exercise 4.4: Create the API controller class
 Next up, is creating the controller class that is responsible for handling request from the frontend. In this section we will use Visual Studio, and the built-in Swagger UI, to demonstrate how this works. Swagger is a UI in the browser, and we can use it to test to backend, without developing a frontend. 
 
 First, right click on the Controller folder, in the API project, in the Solution Explorer. Then select Empty API Controller. Then name it LoginController.cs. This adds the new controller class to the API project.
