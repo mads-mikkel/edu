@@ -94,3 +94,55 @@ Declare a uint variable named inventoryCount and set it to 150.
 Declare a uint variable named totalPoints and assign it 0. Then, update its value to 500.
 
 Declare a uint variable named lineCount and assign it 2500.
+
+# C# Parsing and Conversion Exercises
+
+You must use either Convert.ToX methods or the Parse method of a data type like this:
+
+`int value = Convert.ToInt32("45");`
+
+`int value = int.Parse("45");`
+
+## string to int
+Declare a string variable named ageAsString and assign it the value "30". Convert this string to an int and store the result in a new variable named age.
+
+Declare a string variable named scoreAsString with the value "95". Use the int.Parse() method to convert it to an integer and save it in a variable called score.
+
+Declare a string variable named yearString with the value "2025". Use the Convert.ToInt32() method to convert it and store the result in an int variable named year.
+
+Declare a string variable named quantityString with the value "15". Convert it to an int and assign the value to a variable named quantity.
+
+Declare a string variable named idString with the value "12345". Convert it to an int and save it to an int variable named id.
+
+## string to double
+Declare a string variable named priceAsString and assign it the value "19.99". Convert this string to a double and store the result in a new variable named price.
+
+Declare a string variable named gpaString with the value "3.75". Use the double.Parse() method to convert it to a double and save it in a variable called gpa.
+
+Declare a string variable named temperatureString with the value "22.5". Use the Convert.ToDouble() method to convert it and store the result in a double variable named temperature.
+
+Declare a string variable named weightString with the value "70.3". Convert it to a double and assign the value to a variable named weight.
+
+Declare a string variable named piString with the value "3.14159". Convert it to a double and save it to a double variable named pi.
+
+## int to double
+Declare an int variable named number with a value of 15. Convert this integer to a double using an implicit conversion and store the result in a new variable named doubleNumber.
+
+Declare an int variable named distanceMiles with the value 100. Convert it to a double and save it in a new variable named distanceKilometers.
+
+Declare an int variable named points with a value of 50. Use the Convert.ToDouble() method to convert it and store the result in a double variable named score.
+
+Declare an int variable named itemCount with the value 8. Convert this to a double and save the value to a variable named itemDouble.
+
+Declare an int variable named year with the value 2025. Convert it to a double and store it in a double variable named yearDouble.
+
+## double to int
+Declare a double variable named heightInches with a value of 72.5. Convert this to an int using an explicit cast and store the result in a new variable named height.
+
+Declare a double variable named totalCost with a value of 150.75. Convert this to an int and save it in a new variable called roundedCost.
+
+Declare a double variable named result with a value of 10.9. Use the Convert.ToInt32() method to convert it and store the result in an int variable named integerResult.
+
+Declare a double variable named averageScore with a value of 85.4. Convert it to an int and save the value to a variable named finalScore.
+
+Declare a double variable named pi with a value of 3.14159. Convert it to an int and store it in an int variable named piInteger.
