@@ -137,6 +137,12 @@ Declare an int variable named itemCount with the value 8. Convert this to a doub
 Declare an int variable named year with the value 2025. Convert it to a double and store it in a double variable named yearDouble.
 
 ## double to int
+This is a explicit cast:
+```cs
+double myDouble = 10.99;
+int myInteger = (int)myDouble;
+```
+
 Declare a double variable named heightInches with a value of 72.5. Convert this to an int using an explicit cast and store the result in a new variable named height.
 
 Declare a double variable named totalCost with a value of 150.75. Convert this to an int and save it in a new variable called roundedCost.
